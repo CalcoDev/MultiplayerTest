@@ -9,3 +9,22 @@ script = ExtResource("1_wlcaj")
 server = NodePath("../ServerComponent")
 
 [node name="ServerComponent" type="ServerComponent" parent="."]
+on_started = Signal()
+on_stopped = Signal()
+on_client_connected = Signal()
+on_client_disconnected = Signal()
+on_packet_received = Signal()
+
+[node name="Start" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 40.0
+offset_right = 314.0
+offset_bottom = 125.0
+text = "Start Server"
+
+[node name="Stop" type="Button" parent="."]
+offset_left = 339.0
+offset_top = 41.0
+offset_right = 610.0
+offset_bottom = 126.0
+text = "Stop Server"

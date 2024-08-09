@@ -41,5 +41,7 @@ func main() {
 	}
 	GL = godot
 	gd.Register[GoNode](godot)
+	gd.Register[DummyClient](godot)
 	gd.Register[ServerComponent](godot)
+	gd.Register[ClientComponent](godot)
 }
