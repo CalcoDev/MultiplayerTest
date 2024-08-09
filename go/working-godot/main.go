@@ -7,6 +7,12 @@ import (
 	"grow.graphics/gd/gdextension"
 )
 
+const SERVER_IP = "127.0.0.1"
+const SERVER_PORT = 25565
+const SERVER_LOGS = "server.log"
+
+const CLIENT_LOGS = "client.log"
+
 var GL gd.Lifetime
 
 type GoNode struct {
@@ -35,4 +41,5 @@ func main() {
 	}
 	GL = godot
 	gd.Register[GoNode](godot)
+	gd.Register[ServerComponent](godot)
 }

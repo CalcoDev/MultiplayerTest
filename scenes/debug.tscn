@@ -1,12 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3pqx8g6lgs3r"]
 
-[ext_resource type="Script" path="res://extensions/working-godot/test_script.gd" id="1_46gs1"]
+[ext_resource type="Script" path="res://extensions/working-godot/server_test.gd" id="1_wlcaj"]
 
 [node name="World" type="Node2D"]
 
-[node name="GoNode" type="GoNode" parent="."]
-ExportedInt = 12
+[node name="ServerTest" type="Node" parent="." node_paths=PackedStringArray("server")]
+script = ExtResource("1_wlcaj")
+server = NodePath("../ServerComponent")
 
-[node name="Node" type="Node" parent="." node_paths=PackedStringArray("gonode")]
-script = ExtResource("1_46gs1")
-gonode = NodePath("../GoNode")
+[node name="ServerComponent" type="ServerComponent" parent="."]
