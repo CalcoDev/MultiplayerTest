@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3pqx8g6lgs3r"]
+
+[ext_resource type="Script" path="res://extensions/working-godot/test_script.gd" id="1_46gs1"]
+
+[node name="World" type="Node2D"]
+
+[node name="GoNode" type="GoNode" parent="."]
+ExportedInt = 12
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("gonode")]
+script = ExtResource("1_46gs1")
+gonode = NodePath("../GoNode")
